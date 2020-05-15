@@ -10,19 +10,33 @@ import {
     CardContent,
     CardMedia,
     Button,
-    Typography
+    Typography,
+    ButtonBase
 } from '@material-ui/core'
 
-export default class Projects extends React.Component {
-    render() {
+const useStyles = makeStyles(theme=>({
+    mainContainer:{
+        background: "#233",
+        height: "100%"
+    },
+    cardContainer: {
+        maxWidth: 345,
+        margin: "3rem",
+        margin: "5rem auto"
+    }
+}))
+
+const Projects = () => {
+    const classes = useStyles();
+    
         return (
             <>
-                <Box component="div">
+                <Box component="div" className={classes.mainContainer}>
                 <Title />
                 <Grid container  justify="center" alignItems="center">
                     {/* Project 1 */}
                     <Grid item xs={12} sm={8} md={6}>
-                    <Card>
+                    <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia component="img"
                             alt="project1"
@@ -37,11 +51,77 @@ export default class Projects extends React.Component {
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary">
+                                    Share
+                                </Button>
+                                <Button size="small" color="primary">
+                                    Demo
+                                </Button>
+                            </CardActions>
                     </Card>
                     </Grid>
+
+                    {/* Project 2 */}
+                    <Grid item xs={12} sm={8} md={6}>
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia component="img"
+                            alt="project1"
+                            height="140"
+                            image="https://image.shutterstock.com/image-photo/butterfly-grass-on-meadow-night-260nw-1111729556.jpg"/>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5">
+                                    Project 1
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    Description of the project1
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary">
+                                    Share
+                                </Button>
+                                <Button size="small" color="primary">
+                                    Demo
+                                </Button>
+                            </CardActions>
+                    </Card>
+                    </Grid>
+
+                    {/* Project 3 */}
+                    <Grid item xs={12} sm={8} md={6}>
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia component="img"
+                            alt="project1"
+                            height="140"
+                            image="https://image.shutterstock.com/image-photo/butterfly-grass-on-meadow-night-260nw-1111729556.jpg"/>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5">
+                                    Project 1
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    Description of the project1
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary">
+                                    Share
+                                </Button>
+                                <Button size="small" color="primary" >
+                                    Demo
+                                </Button>
+                            </CardActions>
+                    </Card>
+                    </Grid>
+
                 </Grid>
                 </Box>
             </>
         )
     }
-}
+
+export default Projects
