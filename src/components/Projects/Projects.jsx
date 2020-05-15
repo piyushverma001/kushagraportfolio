@@ -21,8 +21,12 @@ const useStyles = makeStyles(theme=>({
     },
     cardContainer: {
         maxWidth: 345,
-        margin: "3rem",
         margin: "5rem auto"
+    },
+    heading:{
+        color: "tomato",
+        padding: "3rem 0",
+        textTransform: "uppercase"
     }
 }))
 
@@ -33,6 +37,9 @@ const Projects = () => {
             <>
                 <Box component="div" className={classes.mainContainer}>
                 <Title />
+                <Typography variant="h4" className={classes.heading} align="center">
+                    Projects
+                </Typography>
                 <Grid container  justify="center" alignItems="center">
                     {/* Project 1 */}
                     <Grid item xs={12} sm={8} md={6}>
