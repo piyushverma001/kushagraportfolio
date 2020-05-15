@@ -9,7 +9,7 @@ Box
 import {makeStyles} from '@material-ui/core/styles'
 
 import Typed from 'react-typed'
-import avatar from '../../images/avatar.png'
+import avatar from '../../images/kushagra.jpg'
 
 //CSS STYLE
 const useStyles= makeStyles(theme=>({
