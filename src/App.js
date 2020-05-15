@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Home from './components/Home'
 import './App.css';
+import {Resume, Projects} from './components'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import {Route} from 'react-router-dom'
+
+
+
+class App extends Component{
+    render() {
+        return(
+            <>
+            <CssBaseline />
+                <Route exact path="/" component={Home} />
+                <Route path="/resume" component={Resume} />
+                <Route path="/projects" component={Projects} />
+            </>
+        );
+    }
+};
 
 export default App;
