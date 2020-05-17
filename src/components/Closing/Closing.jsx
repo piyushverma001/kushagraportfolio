@@ -5,7 +5,7 @@ import {
     Typography,
     Button,
     Grid,
-    Box
+    Box,
 } from '@material-ui/core'
 
 import Title from '../Title/Title'
@@ -17,6 +17,7 @@ function sendEmail(e) {
     emailjs.sendForm('gmail', 'template_GM3FpLNe', e.target, 'user_oS6jI5YrIHumLku8kKJ1t')
       .then((result) => {
           console.log(result.text);
+          alert("Message Sent Successfully")
       }, (error) => {
           console.log(error.text);
       });
@@ -58,10 +59,10 @@ const InputField = withStyles({
 
 const useStyles = makeStyles(theme=>({
     form:{
+        position: "absolute",
         top: "50%",
-        lefft: "50%",
-        transform: "translate(-50%, -50%)",
-        position: "absolute"
+        left: "50%",
+        transform: "translate(-50%, -50%)"
     },
     button: {
         marginTop: "1rem",
@@ -78,10 +79,11 @@ const Closing = () => {
     return (
       
         <Box component="div" style={{background:"#233", height:"100vh"}}>
-        <Title />
+            <Title />
             <Grid container justify="center">
+                <form onSubmit={sendEmail}>
                 <Box component="form" className={classes.form}>
-                    <Typography variant="h5" style={{color:"tomato", textAlign:"center", textTransform:"uppercase"}}>
+                    <Typography variant="h3" style={{color:"tomato", textAlign:"center", textTransform:"uppercase"}}>
                         Hire Me or Contact Me
                     </Typography>
                     <InputField 
@@ -91,6 +93,7 @@ const Closing = () => {
                     margin="dense"
                     inputProps={{ style: {color: "white" }}}
                     size="medium"
+                    name="from_name"
                      />
                     <br />
                     <InputField 
@@ -99,7 +102,8 @@ const Closing = () => {
                     variant="outlined"
                     margin="dense"
                     inputProps={{ style: {color: "white" }}}
-                    size="medium"  />
+                    size="medium" 
+                    name="reply_to" />
                     <br />
                     <InputField 
                     fullWidth={true}
@@ -109,13 +113,20 @@ const Closing = () => {
                     inputProps={{ style: {color: "white" }}}
                     size="medium"
                     multiline
-                    rows={4}  />
+                    rows={4} 
+                    name="message_html" />
                     <br />
 
-                    <Button variant="outlined" className={classes.button} fullWidth={true} endIcon={<SendIcon />}>
+                    <Button 
+                    variant="outlined"
+                    className={classes.button}
+                    fullWidth={true}
+                    endIcon={<SendIcon/>}
+                    type="submit" >
                         Contact me
                     </Button>
                 </Box>
+                </form>
             </Grid>
         
 

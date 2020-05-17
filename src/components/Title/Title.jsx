@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {makeStyles} from '@material-ui/core/styles';
 import MobilRightMenuSlider from '@material-ui/core/Drawer'
 import {Link} from 'react-router-dom'
+import Footer from '../Footer/Footer'
 import {
 AppBar,
 Toolbar,
@@ -30,7 +31,7 @@ import avatar from "../../images/avatar.png"
 //styles:
 const useStyles = makeStyles(theme=>({
     menuSliderContainer:{
-        width: 250,
+        width: 325,
         background: "#511",
         height: "100%"
     },
@@ -125,6 +126,7 @@ const Title = () => {
                         open={state.right}
                         onClose={toggleSlider("right", false)}>
                              {sidelist("right")}
+                        <Footer />
                         </MobilRightMenuSlider>
                     </Toolbar>
                 </AppBar>
