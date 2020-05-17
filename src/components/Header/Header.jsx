@@ -14,12 +14,13 @@ import avatar from '../../images/kushagra.jpg'
 //CSS STYLE
 const useStyles= makeStyles(theme=>({
     avatar:{
-        width: theme.spacing(15),
-        height: theme.spacing(15),
+        width: theme.spacing(20),
+        height: theme.spacing(20),
         margin: theme.spacing(1)
     },
     title:{
         color: "tomato"
+        
     },
     subtitle:{
         color:"tan",
@@ -45,7 +46,7 @@ const classes = useStyles();
             <Grid container justify="center">
                 <Avatar className={classes.avatar} src={avatar} alt="Kushagra Roy" />
             </Grid>
-            <Typography className={classes.title} variant="h4">
+            <Typography className={classes.title} variant="h3">
                 <Typed 
                     strings={["Kushagra Roy"]}
                     typeSpeed={80}
@@ -59,6 +60,10 @@ const classes = useStyles();
                     backSpeed={50}
                     loop
                     />
+            </Typography>
+
+            <Typography>
+                Hello
             </Typography>
         </Box>
     )

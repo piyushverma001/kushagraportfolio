@@ -19,7 +19,7 @@ Box
 } from '@material-ui/core'
 
 import {
-ArrowBack,
+Dehaze,
 AssignmentInd,
 Home,
 Apps,
@@ -114,13 +114,13 @@ const Title = () => {
             <Box component= "nav">
                 <AppBar position="static" style={{background: "#222"}}>
                     <Toolbar>
-                        <IconButton onClick={toggleSlider("right", true)}>
-                             <ArrowBack style={{color:"tomato"}}/>
-                        </IconButton>
+                        
                         <Typography variant="h5" style={{color:"tan"}}>
                             Portfolio
                         </Typography>
-
+                        <IconButton onClick={toggleSlider("right", true)} style={{float:"right"}}>
+                             <Dehaze style={{color:"tomato"}}/>
+                        </IconButton>
                         <MobilRightMenuSlider
                         anchor="right"
                         open={state.right}
