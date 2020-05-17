@@ -118,7 +118,7 @@ const Title = () => {
                         <Typography variant="h5" style={{color:"tan"}}>
                             Portfolio
                         </Typography>
-                        <IconButton onClick={toggleSlider("right", true)} style={{float:"right"}}>
+                        <IconButton onClick={toggleSlider("right", true)} style={{marginLeft:"auto"}}>
                              <Dehaze style={{color:"tomato"}}/>
                         </IconButton>
                         <MobilRightMenuSlider
