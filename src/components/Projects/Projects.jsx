@@ -12,6 +12,7 @@ import {
     Button,
     Typography,
 } from '@material-ui/core'
+import getValues from '../../API/api'
 
 const useStyles = makeStyles(theme=>({
     mainContainer:{
@@ -29,10 +30,11 @@ const useStyles = makeStyles(theme=>({
     }
 }))
 
+
 const Projects = () => {
     const classes = useStyles();
-    
-        return (
+    getValues();
+    return (
             <>
                 <Box component="div" className={classes.mainContainer}>
                 <Title />

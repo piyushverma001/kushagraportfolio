@@ -38,7 +38,7 @@ const useStyles= makeStyles(theme=>({
     desc:{
         color:"white",
         width:"40%",
-        margin:"auto auto",
+        margin:"0 auto",
         [theme.breakpoints.down("md")]:{
             width:"95%"
         }
@@ -70,7 +70,7 @@ const classes = useStyles();
                     />
             </Typography>
 
-            <Typography variant="h6" className={classes.desc} align="center">
+            <Typography variant="body2" className={classes.desc} align="center">
             I am a mechanical engineer who focuses on providing highly valuable and practical
 designs on project that focuses on high-quality designs with reduced manufacturing
 costs. I have worked on more than 15 projects, which have proven to be extremely
