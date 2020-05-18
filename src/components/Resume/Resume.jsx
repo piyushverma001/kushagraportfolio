@@ -4,12 +4,10 @@ import {makeStyles} from '@material-ui/core/styles'
 import {
     Typography,
     Box,
-    Icon,
     IconButton
 } from '@material-ui/core'
 
 import {Title} from '../../components'
-import { Link } from 'react-router-dom'
 import GetAppIcon from '@material-ui/icons/GetApp';
 
 const useStyles = makeStyles(theme=>({

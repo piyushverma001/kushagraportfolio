@@ -43,7 +43,7 @@ const Projects = () => {
                 </Typography>
                 <Grid container  justify="center" alignItems="center">
                     {/* Project 1 */}
-                    <Grid item xs={12} sm={8} md={6}>
+                   {data.map((value,i) =><Grid key={i} item xs={12} sm={8} md={6}>
                     <Card className={classes.cardContainer}>
                         <CardActionArea>
                             <CardMedia component="img"
@@ -68,7 +68,7 @@ const Projects = () => {
                                 </Button>
                             </CardActions>
                     </Card>
-                    </Grid>
+                    </Grid>)}
 
                     {/* Project 2 */}
                     
