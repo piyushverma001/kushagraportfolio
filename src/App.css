@@ -4,6 +4,7 @@ html{
     -webkit-background : cover;
     -moz-background : cover;
     -o-background : cover;
-    background : cover;
+    background-size : cover;
     min-height: 100%;
+    height: 100vh;
 }
