@@ -34,7 +34,8 @@ const useStyles = makeStyles(theme=>({
         width: 325,
         background: "#511",
         height: "100%"
-    },
+    
+},
 
     avatar :{
         display: "block",

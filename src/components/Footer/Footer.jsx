@@ -37,7 +37,8 @@ const Footer = () => {
             <BottomNavigationAction
             className={classes.root}
             style={{padding:0}}
-            icon={<Facebook />} />
+            icon={<Facebook />} 
+            href="https://google.com"/>
 
             <BottomNavigationAction
             className={classes.root}

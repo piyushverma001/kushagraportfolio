@@ -3,11 +3,14 @@ import {makeStyles} from '@material-ui/core/styles'
 
 import {
     Typography,
-    Box
+    Box,
+    Icon,
+    IconButton
 } from '@material-ui/core'
 
 import {Title} from '../../components'
-
+import { Link } from 'react-router-dom'
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 const useStyles = makeStyles(theme=>({
     mainContainer:{
@@ -107,7 +110,14 @@ const useStyles = makeStyles(theme=>({
         color: "white",
         padding: "0",
         textTransform: "uppercase"
+    },
+    buttond:{
+        color:"tan",
+        "&:hover":{
+            color:"tomato"
+        }
     }
+  
 }))
 
 
@@ -123,6 +133,18 @@ const Resume = () => {
                 <Typography variant="h4" className={classes.heading} align="center">
                     experiences
                 </Typography>
+                <Typography variant="body1" className={classes.heading} align="center">
+                    Download Resume
+                    <IconButton href="https://drive.google.com/file/d/1hhsEqhpmN-7JhRtome6kyMCs6Nq59_uA/view">
+                    <GetAppIcon className={classes.buttond} />
+                    </IconButton>
+                    
+                </Typography>
+
+               
+               
+                
+                
             
                 
                 <Box component="div" className={classes.timeLine}>
