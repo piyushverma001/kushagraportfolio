@@ -70,14 +70,14 @@ const classes = useStyles();
                     />
             </Typography>
 
-            <Typography variant="body2" className={classes.desc} align="center">
+            {/* <Typography variant="body2" className={classes.desc} align="center">
             I am a mechanical engineer who focuses on providing highly valuable and practical
 designs on project that focuses on high-quality designs with reduced manufacturing
 costs. I have worked on more than 15 projects, which have proven to be extremely
 efficient operationally as well as cost effective. I always put the needs of my clients and
 project end-users first, to ensure that my design are practical, usable and economically
 viable.
-            </Typography>
+            </Typography> */}
         </Box>
     )
 }
