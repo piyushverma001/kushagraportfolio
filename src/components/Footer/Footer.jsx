@@ -8,7 +8,7 @@ import {
 import {makeStyles} from '@material-ui/core/styles'
 import {
     BottomNavigationAction,
-    BottomNavigation
+    BottomNavigation,
 } from '@material-ui/core'
 
 
@@ -34,6 +34,7 @@ const Footer = () => {
     const classes = useStyles()
     return (
         <BottomNavigation width="auto" style={{background:"#222"}}>
+
             <BottomNavigationAction
             className={classes.root}
             style={{padding:0}}
@@ -58,7 +59,9 @@ const Footer = () => {
             icon={<LinkedIn />}
             href="https://www.linkedin.com/in/kushagra-roy-961654172/"
              />
+             
         </BottomNavigation>
+        
 
     )
 }

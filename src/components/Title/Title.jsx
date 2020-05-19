@@ -45,6 +45,11 @@ const useStyles = makeStyles(theme=>({
     },
     listItem:{
         color:"tan"
+    },
+    credits:{
+        color:"tan",
+        height:"50px",
+        marginTop:"auto"
     }
 
 }));
@@ -105,6 +110,13 @@ const Title = () => {
                         <ListItemText className={classes.listItem} primary={lsitem.listText}/>
                     </ListItem>
                     ))}
+                    <a style={{textDecoration:"underline", color:"tan"}} target="_blank" href="https://piyushverma.netlify.com">
+                    <Typography variant="h6" align="center" className={classes.credits} >
+                        Created and hosted by 
+                        <strong> @Devil</strong>
+                    </Typography>
+                    </a>
+                    
                     
                 </List>
             </Box>
