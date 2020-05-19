@@ -63,7 +63,7 @@ const classes = useStyles();
             <br />
             <Typography className={classes.subtitle} variant="h5">
                 <span>I am a </span>
-                <Typed strings={["Designer", "3D Modeller", "Innovator", "Rendering", "Youtuber"]}
+                <Typed strings={["Designer", "3D Modeller", "Innovator", "3D Rendering Artist", "Youtuber"]}
                     typeSpeed={80}
                     backSpeed={50}
                     loop

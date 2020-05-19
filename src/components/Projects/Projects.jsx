@@ -12,7 +12,7 @@ import {
     Button,
     Typography,
 } from '@material-ui/core'
-import getValues from '../../API/api'
+// import axios from 'axios'
 
 const useStyles = makeStyles(theme=>({
     mainContainer:{
@@ -31,44 +31,55 @@ const useStyles = makeStyles(theme=>({
 }))
 
 
-const Projects = () => {
+
+
+const Projects = ({data}) => {
     const classes = useStyles();
-    const data = getValues();
+    // const data =   getValues();
+    console.log(data);
+
+    const listItems = data.map((item,id)=>
+    <Grid key={id} item xs={12} sm={8} md={6}>
+                    <Card className={classes.cardContainer}>
+                        <CardActionArea>
+                            <CardMedia component="img"
+                            alt="loading.."
+                            height="200"
+                            image={item.Image}/>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5">
+                                    {item.Name}
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    {item.Desc}
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                            <CardActions>
+                                {/* <Button size="small" color="primary">
+                                    Share
+                                </Button> */}
+                                <Button size="small" color="primary" href={item.Link} target="_blank">
+                                    Open in Behance
+                                </Button>
+                            </CardActions>
+                    </Card>
+                    </Grid>
+    );
+    if(data){
+
+    
     return (
             <>
                 <Box component="div" className={classes.mainContainer}>
                 <Title />
                 <Typography variant="h4" className={classes.heading} align="center">
-                    Projects
+                    Work Samples
                 </Typography>
                 <Grid container  justify="center" alignItems="center">
                     {/* Project 1 */}
-                   {data.map((value,i) =><Grid key={i} item xs={12} sm={8} md={6}>
-                    <Card className={classes.cardContainer}>
-                        <CardActionArea>
-                            <CardMedia component="img"
-                            alt="project1"
-                            height="140"
-                            image="https://image.shutterstock.com/image-photo/butterfly-grass-on-meadow-night-260nw-1111729556.jpg"/>
-                            <CardContent>
-                                <Typography gutterBottom variant="h5">
-                                    Project 1
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    Description of the project1
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                            <CardActions>
-                                <Button size="small" color="primary">
-                                    Share
-                                </Button>
-                                <Button size="small" color="primary">
-                                    Demo
-                                </Button>
-                            </CardActions>
-                    </Card>
-                    </Grid>)}
+                    
+                   {listItems}
 
                     {/* Project 2 */}
                     
@@ -80,6 +91,14 @@ const Projects = () => {
                 </Box>
             </>
         )
+    }
+    else{
+        return (
+            <Typography style={{color: "white"}}>
+                Loading
+            </Typography>
+        )
+    }
     }
 
 export default Projects

@@ -38,22 +38,26 @@ const Footer = () => {
             className={classes.root}
             style={{padding:0}}
             icon={<Facebook />} 
-            href="https://google.com"/>
+            href="https://www.facebook.com/kushagra.roy.73"/>
 
             <BottomNavigationAction
             className={classes.root}
             style={{padding:0}}
-            icon={<Instagram />} />
+            icon={<Instagram />}
+            href="https://www.instagram.com/i_am_kush_roy/" />
 
             <BottomNavigationAction
             className={classes.root}
             style={{padding:0}}
-            icon={<YouTube />} />
+            icon={<YouTube />} 
+            href="https://www.youtube.com/channel/UCMeCpVc5Zv6IQDgO-99glNg" />
 
             <BottomNavigationAction
             className={classes.root}
             style={{padding:0}}
-            icon={<LinkedIn />} />
+            icon={<LinkedIn />}
+            href="https://www.linkedin.com/in/kushagra-roy-961654172/"
+             />
         </BottomNavigation>
 
     )
